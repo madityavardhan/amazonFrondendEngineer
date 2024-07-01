@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating Component</title>
+    <style>
+        .star {
+            cursor: pointer;
+            font-size: 2rem;
+            color: lightgray;
+        }
+        .star.selected {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div id="starRating">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+    </div>
+
+    <script>
+
+        /*
+        Star Rating 
+        1st select all stars
+        iterate through all of them and add on clicj listner, if clickedm get the start value
+        then iterate thriugh akk the starts, remove the selected start then get the value of the star 
+
+        if the valueOfStar<selectedStar 
+            then add the seleectd valye
+        
+        use s.classList.remove('selected');, .add('selected') for adding or removing the selected star
+
+
+        */
+
+
+        document.querySelectorAll('#starRating .star').forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.getAttribute('data-value');
+                document.querySelectorAll('#starRating .star').forEach(s => {
+                    s.classList.remove('selected');
+                    if (s.getAttribute('data-value') <= rating) {
+                        s.classList.add('selected');
+                    }
+                });
+            });
+        });
+
+
+    </script>
+</body>
+</html>

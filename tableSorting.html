@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table Component</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <input id="filter" type="text" placeholder="Filter...">
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>30</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>25</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Sam Brown</td>
+                <td>40</td>
+                <td>UK</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        /*
+        Sort table contents 
+
+        Get the input value form input text box
+        
+        */
+        document.getElementById('filter').addEventListener('input', function() {
+            const filter = this.value.toLowerCase();
+            document.querySelectorAll('#dataTable tbody tr').forEach(row => {
+                row.style.display = Array.from(row.cells).some(cell => cell.textContent.toLowerCase().includes(filter)) ? '' : 'none';
+            });
+        });
+
+        document.querySelectorAll('#dataTable th').forEach(th => {
+            th.addEventListener('click', () => {
+                const table = th.closest('table');
+                const rows = Array.from(table.querySelectorAll('tbody tr'));
+                const index = Array.from(th.parentNode.children).indexOf(th);
+                const isAsc = th.classList.toggle('asc');
+                rows.sort((rowA, rowB) => {
+                    const cellA = rowA.children[index].textContent;
+                    const cellB = rowB.children[index].textContent;
+                    return cellA.localeCompare(cellB, undefined, { numeric: true }) * (isAsc ? 1 : -1);
+                });
+                rows.forEach(row => table.querySelector('tbody').appendChild(row));
+            });
+        });
+    </script>
+</body>
+</html>

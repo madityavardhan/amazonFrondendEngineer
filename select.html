@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Component</title>
+    <style>
+        .select {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+        }
+        .select-items {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ddd;
+            z-index: 99;
+            width: 100%;
+        }
+        .select-items div {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .select-items div:hover {
+            background-color: #e9e9e9;
+        }
+    </style>
+</head>
+<body>
+    <div class="select">
+        <div id="select-selected">Select an option</div>
+        <div id="select-items" class="select-items">
+            <div data-value="1">Option 1</div>
+            <div data-value="2">Option 2</div>
+            <div data-value="3">Option 3</div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('select-selected').addEventListener('click', function() {
+            const items = document.getElementById('select-items');
+            items.style.display = items.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.querySelectorAll('#select-items div').forEach(item => {
+            item.addEventListener('click', function() {
+                document.getElementById('select-selected').textContent = this.textContent;
+                document.getElementById('select-items').style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('#select-selected')) {
+                document.getElementById('select-items').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

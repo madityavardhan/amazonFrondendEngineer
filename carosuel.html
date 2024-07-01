@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Component</title>
+    <style>
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 300px;
+        }
+        .carousel img {
+            width: 300px;
+            flex-shrink: 0;
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+    </div>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+
+    <script>
+        /*
+        Next and previous images or anything
+        select the desired section, and the contest (images in this case)
+        use document.querySelector() to get the elements by any referenec, class name, id, div and tags
+
+        write functions for next button and previous button
+        
+
+        */
+        let index = 0;
+        const carousel = document.querySelector('.carousel');
+        const images = document.querySelectorAll('.carousel img');
+
+        document.getElementById('next').addEventListener('click', () => {
+            index = (index + 1) % images.length;
+            carousel.style.transform = `translateX(-${index * 300}px)`;
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            index = (index - 1 + images.length) % images.length;
+            carousel.style.transform = `translateX(-${index * 300}px)`;
+        });
+    </script>
+</body>
+</html>

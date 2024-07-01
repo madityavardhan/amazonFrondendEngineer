@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocomplete Component</title>
+    <style>
+        .autocomplete-items {
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            position: absolute;
+            background: white;
+        }
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #d4d4d4;
+        }
+        .autocomplete-items div:hover {
+            background-color: #e9e9e9;
+        }
+    </style>
+</head>
+<body>
+    <input id="autocomplete" type="text" placeholder="Search...">
+    <div id="autocomplete-list" class="autocomplete-items"></div>
+
+    <script>
+        const items = ["apple", "banana", "cherry", "date", "fig", "grape", "kiwi"];
+
+        /*
+            Select the input value, get the input and check of each items, the current input is
+            a part of the items using inclues, if present then create a div and div.textcontent = item
+
+            this shows the auto complete matched items, if clicked change the input value to the 
+            list clicked item and then clear the list
+
+            if not clicked then list.appendChild(div); to show the elemnt in the list
+
+            list is the element that is displayed when the used starts typing any input
+        */
+    //    documnt.creatrElement('div') - to create an elemnt
+    // div.textConetet
+    // list.appendCheidl?
+        document.getElementById('autocomplete').addEventListener('input', function() {
+            const value = this.value.toLowerCase();
+        // here this is used because the input section is already selected
+            const list = document.getElementById('autocomplete-list');
+            list.innerHTML = '';
+            if (!value) return;
+            items.forEach(item => {
+                if (item.toLowerCase().includes(value)) {
+                    const div = document.createElement('div');
+                    div.textContent = item;
+                    div.addEventListener('click', function() {
+                        document.getElementById('autocomplete').value = item;
+                        list.innerHTML = '';
+                    });
+                    list.appendChild(div);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
