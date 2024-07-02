@@ -32,6 +32,18 @@
     </div>
 
     <script>
+        /*
+
+        Accordian 
+
+        get alll the accordions, for each accordion add on click event, 
+
+        const content = title.nextElementSibling; gets the content, because 
+        the next elemtn sibling for title is content
+
+        Then stop displaying all the content, and only enable the content for the present element
+        
+        */
         document.querySelectorAll('.accordion-title').forEach(title => {
             title.addEventListener('click', () => {
                 const content = title.nextElementSibling;
