@@ -49,15 +49,19 @@
             }
         })
         */
-        document.getElementById('openModal').addEventListener('click', function() {
+        document.getElementById('openModal').addEventListener('click', () => {
             document.getElementById('modal').style.display = 'flex';
         });
 
-        document.getElementById('closeModal').addEventListener('click', function() {
+        document.getElementById('closeModal').addEventListener('click', () => {
             document.getElementById('modal').style.display = 'none';
         });
 
-        window.addEventListener('click', function(event) {
+        document.getElementById('closeModal').addEventListener('mouseover', function() {
+            this.style.cursor = 'pointer';
+        });
+        
+        window.addEventListener('click', (event) => {
             if (event.target === document.getElementById('modal')) {
                 document.getElementById('modal').style.display = 'none';
             }
