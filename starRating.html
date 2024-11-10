@@ -37,6 +37,14 @@
         
         use s.classList.remove('selected');, .add('selected') for adding or removing the selected star
 
+        const val = star.getAttribute('data-value');
+        document.querySelectorAll('#starRating .star').forEach(s=>{
+            s.classList.remove('selected');
+            if(s.getAttribte('data-val')<=val){
+                s.classList.add('selected');   
+            }
+            
+        })
 
         */
 

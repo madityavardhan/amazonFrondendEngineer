@@ -1,0 +1,151 @@
+*****if you dont understand any solotion, think slow, write on paper, see sol twice or trice, dont get stuck/stop 
+SDE prep - focus more on coding(dsa), LP, projects(in managerial),
+a little bit of low level design, and high level design
+if stuuck with getting approach for any question, think of all possible approaches using standard algorithms
+like bs, heap, greedy etc.
+for every question 1st understand the question draw something and go through examples,
+to get a good understanding of the problem and hints twoards solution
+most of the amazons questions are using heaps, see heap questins 
+for increasing or des seq use montonic stack 
+{For deep copy questions, maintain a old to new hashmap and replicate the old dataStr to new one}
+{for checking freq of chars use array of size 26 instead of hashmap }
+
+
+
+Previous amazon coding questions - practice all 
+also do neetcode 150, cses topics - bs, dp, trees, graphs
+
+new in recent intrevewis, LLD, adj list graph qns, cp like questins 
+
+1st complete blind 75, then practice on imperfect topics 
+strivers blind 75list, 
+best time to buy and sell stocks all versions
+kadanes algo - see some applications of this problem 
+k-freq elements, use heeap greater<pair<int,int>>(), sorting criteria
+{max prod subarray(kadanes) - modification of kadanes algorithm
+Maintain curMax,and curMin at every element, maintain a temp var at every step to get the desired output
+temp = curMax*cur, Curmax = max(curmax*cur,curmin*cur,num), Curmin = min(temp,curMin*cur,cur)
+ }
+see striver sheet for remaining array questions
+**dp - memorization, top down,
+1st recognise the base case and recursive steps, itll get easire to write dp solns
+climbing stairs,- base case 1,2-recursive step  cur = n-1+n-2;
+coin change-two variations, just interchange the loops
+I - min ways, II - no of ways 
+I - base case dp[0]=0;
+loop for every amount, and interbal loop for coins and check base case
+II - juist interchange the loops
+LCS-two cases if ch[i]==ch[j] cur=1+ch[i+1][j+1] else max(ch[i+1][j],ch[i][j+1])
+reorder string - use heap to store char freq map and pudh alternative chars
+decode ways - we can consider single char, or two chars inclusive of 10,26
+**imp trees 
+{max depth of binary treee - two approaches, bfs and find the number of levels
+or dfs and find max length of left and right}
+{MaxPathSum - at each node cal left and right as max(0,left/right), and compute res = max(res,val+left+right) and we return val+max(left,right) since we need to get the path,
+ if we take both, we cant mnake a path with the parent node}
+{houseRobber3 - maintain a pair inclusing curNode, excluding cur node, at each node compute them and pass it to its parent
+finally return the max of that pair}
+{
+    valid bst or not:
+    for every node check if the node is in valid range or not, 
+    and check the same for left subtree and right subtree
+}
+{
+    same tree, 
+    compare left left and right right values
+    sym tree
+    compare left right and right left values
+}
+{
+    construct binary tree from inorder, postorder
+    see, how root is alwasys the last node in postorder,
+    and the val next to it is the right child root, if exists,
+    recursively pass the inorder array slicing it at the current node
+}
+{
+    kth smallest, inorder traversal and count k;
+}
+{
+    serialise and deserialise binary tree
+    there are many ways, using preorder, inorder and postorder
+    using poreorder its easy, just pass the array and append the nodes,
+    if thery are null, return 
+    its unintuitive is we do that we will get the tree, bbut dry run through the usecases,
+    we wiil get the tree just by passing the arrya and doing it recursively 
+}
+{
+    poppulating next pointer in tree;
+    O(1) space soln, Classic BFS has O(n) space, 
+    cur pointer is used to travere the current level, and connect the children of the current level nodes,
+    and next pointer is used to go to the next level and do the same;
+}
+{
+    trie - prefix tree;
+    which has three operations, insert, search, startsWith
+    efficeinet to search strings that startswith a certain val;
+    - see applications of trie questions
+    class TrieNode(){
+        unordered_map<char,TrieNode*> children;
+        bool isEnd = false;
+    };
+}
+{
+    remove one element to make array stricktly increasimg
+    track number of breakpoints, if >1 false
+    if 1, remove and check if makes increasing
+}
+{
+
+}
+*** intervels 
+Always draw the intrevels to have some idea to solve intrevel typr of questions
+like draw the lines for start and end time of the given intrevals in lines 
+
+{merge intervels 
+sort the input intervals, the compare the end time of last interval with the start time of the 
+current interval }
+
+
+
+1. implement previous and next button of browser
+use two stacks prev, next 
+if prev is pressed cur goes to next, and prev.top() comes to cur
+if next is pressed cur goes to prev, and next.top() comes to cur
+Clicking on any link on a page (following a link) will clear the forward stack and push the current page on the back stack
+can also do it using a doubly linked list 
+
+2. LRU cache 
+Efficient way to use LRU is to have a doubly linked list with two pointers(head and tail), for easy access and updating of the nodes
+and a hashmap to check if the values are presemt in the current cache (in O(n)) and update the list
+use map<int, node*> type to store address
+through map directly access the address
+do any operations (deletion , insertion) on that address in O(1)
+
+3. merge intervels 
+sort the input intervals, the compare the end time of last interval with the start time of the 
+current interval 
+
+4. meeting rooms
+
+
+
+
+/*
+initialize 2d vector vector<vector<int>> (n,vector<int>(m,0));
+change int to chat, to_string, or '0'+char
+
+*/
+
+topics 
+
+intreverls (confusing)
+linkedlist*{we need to check for Null at every point before doing any opertion or loops
+for fast slow pointers, use while fast and fast->next}
+heap
+bs
+greedy
+backtracking
+strings 
+graph
+,
+tree,dp,array, 

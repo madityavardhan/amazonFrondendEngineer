@@ -139,4 +139,12 @@ display or block
 div.style.display = 'none';
 div.style.dispaly = 'block';
 
+const respoe = fetch("api", {
+    method : POST,
+    body:JSON.stringify({
+        naame:"aditya",
+        })
+
+    })
+
 */
