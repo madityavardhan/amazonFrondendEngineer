@@ -1,12 +1,93 @@
 *****if you dont understand any solotion, think slow, write on paper, see sol twice or trice, dont get stuck/stop 
+{see course schedule,interviels, heap qns qns brfore interview }
+anamazonsde.com
+prep day 1 - 11/11(inteerview on 12th){
+    go through resume, projects
+    Leadership princples
+    See recent intreview exp, prev coding qns
+    Revise blind 75,150.. qns 
+}
+{
+    job work,
+    multiple use cases levaraging Microsoft copilot studio and exporing its extensabilities around building automated AI chatbots
+    Get information from 3rd party websites by connecting to the account 
+    Automate things like, apply leave, view my taks, Raise a ticket, Ask a query 
+    {**Survey analyser - user gets analysis form the survey responses he gets,
+    uses microsoft formts connector to get the survey details, 
+    Key features, analyse survey, get graphs on the analysis, dowbload the analysis, 
+    types include, user wise, survey wise, and userwise analysis 
+    How did we optimise the survey data,- initially we were getting the whole excel and passing to the GPT, to get the analyis for the survery, which took a lot of time for the LLM to analyse and anseer, then we extracted thet data into a table and passde the table to the gpt, which reduces the time of teh responce since the data is there in html format 
+    SOme features, get graph represented analysis, word could, using APIs 
+    }
+    {
+        pure insurance- in this use case, we used Azure blob storage and Axure Ai search for effectively 
+        storing and retriveing the data from the docs, it uses chunking and indexing to get the best ansers in less time.
+        And compared to the previous methods that we have used to store data(i,e Sharepoint, and know;edge base)
+        this gives better reslts because of these 
+    }
+    {
+        multilingual chatbot, uses skillset and skills to translate the use query and the responce in tyhe required language
+
+    }
+}
+{
+    Leadership princples/behavioural qns:
+    STAR method Situation(background/context),Task(Things you had to perform. not team),
+    Action(what you did), Result(what is the effect of that)
+    1. above and beyond exp - when i was assigned a task to look for the ways to have RAG using microsoft copilot studio,
+    I looked for various ways to do that and also documented all the tradeoff of the ways of which we can do that,
+    For this the onshore team has appricicated and they understod the process well 
+    Also for Insurance usecase, for handling data of large amount in pdfs etc. differemt ways to do, and found out the best way,
+    similarly the onShore team
+    2. calculated risk, - usage of Azure open ai for storing a large amounts of data 
+    beyond just using copilot studio for getting better results
+    i implemented ML model based classification., rather than the alreaady used AI gpt classification since ot was not giving right, and might increradsse yhe accuracy
+
+    3. Tell me about an out-of-the-box idea you had or decision you made that had a big impact on the business.
+    same azure ai - using azure ai for better results than just using the traditional sharepoint or KB
+    or 
+    using links to sharepoint site to upload the documentts by the users 
+    4. When did you have to learn something new to do your job?
+    when i had to use this Azure Ai, search and Skill and Skillset(ffor transformin the data before storing or retriving)
+    ALso power automate in Microsoft copilot studio for having connectors to get the data 
+    5. unhappy customer 
+    When we were working on multilungual usecase, (in a call, one week we were focussing on dev multilingual bot, then they told that they want multiple language supprt, they they asked for having an upload option in the chatbotm, )
+
+    6l missed a deadlime
+    When working with the insurance uasecase, we had to test various ways that we habe,to get the best result for the customer so that they can get precise ansers from yhe bot without any errors.,
+    when testing with the sharepont and KB, we observed some sligt inclrenation of the ansers from the actual answers, 
+    since we were to use only copilot that was the cas,e, So we had to intergate it with Azure Ai 
+    7., When did you have a disagreement with a colleague?
+    when I was asked to replicate the module of what my colluge did for anither usecase, I observed that his approach was not to the point and also the code is not clear, 
+    For which i had found a better way to get the things done in much simpler way and to that the way is comfusing and not easy to unserstand 
+    Ai ti detect/cl;assify the fields to question/not vs ML model
+    Rather than just using GPT, and ask it to classidy the input fielsa, we developed a custom model and trained it with the data we already have(labled data)
+    sql vs (sql + nosql to handle the amoint of comments that we may recieve)
+    8,
+    9.confilict with manager,- when we were discussing a usecase, of how to uplaod a document in the copilot, initially we thought of an approach and started that approach, 
+    when we were at the final stage of that approach, we got to know that that wasn;t the best approach for that usecase, and we had to chnage the approach, the we had a meeting with the manager about that,
+    and what was the isssue and how did you find that the approach was not right, and why didnt you fint it in the initial stage
+
+    10. Customer obsession - in my iot project, we reached out to farmers to find out what are sime of the common problems that they are facing
+    during yhe cultivation of the plants, and we actually found that that using right pesisides at right time was one of the major problems, 
+    we developed insect breeading prediction system, with automated watering, fire alaram aswell , as it would reduce some of the efforts to teh farmers,.
+    by automationg some of the things for them, 
+    11.Give me an example of a complex problem you solved with a simple solution.
+    Uploading docs in chat, for useres, it seemed complex, since we didnt have any direct options to have it in chat, 
+    so I went through some oif the properties of copilot and came accorss the sharepoint tjing, and integreated with Sharepount 
+    12.Tell me about a time when you had to work with a difficult customer or user.
+    the customer keepon changing the requirements/adding features, so we had to work overtime to satisify them 
+    In multilingual usecase, initially we were asked just we inplement the asking queris in different lanhuages, with the docuemnts thay they had, the they sfifterd focus on upladong 
+}
 SDE prep - focus more on coding(dsa), LP, projects(in managerial),
-a little bit of low level design, and high level design
+a little bit of low level design(qns like LRU cache,), and high level design
 if stuuck with getting approach for any question, think of all possible approaches using standard algorithms
 like bs, heap, greedy etc.
 for every question 1st understand the question draw something and go through examples,
 to get a good understanding of the problem and hints twoards solution
 most of the amazons questions are using heaps, see heap questins 
 for increasing or des seq use montonic stack 
+if you get any logic, write some psuesudo code and dry run the examples 
 {For deep copy questions, maintain a old to new hashmap and replicate the old dataStr to new one}
 {for checking freq of chars use array of size 26 instead of hashmap }
 
@@ -104,6 +185,12 @@ like draw the lines for start and end time of the given intrevals in lines
 {merge intervels 
 sort the input intervals, the compare the end time of last interval with the start time of the 
 current interval }
+{
+    insert interval;
+    insert previous intervels - of non colodinhg
+    create a new intervel by taking min of 1st index and max of kast index
+    insert the net indexes which  do not colide
+}
 
 
 
@@ -127,7 +214,17 @@ current interval
 
 4. meeting rooms
 
+5. trapping rain water
+water trapped at each block is the min(maxLeft,maxRight)-currHeight 
+we can efficiently callculate this min value using two pointers by always shifting the min of left and right
+since we know that we only need the min of left max and right max to calculate the water trapped at the current position
 
+6. median of data stream( using two heaps)
+maintain two heaps, small heap(having smaller values, maxHeap). and a large heap(which has larger values, minHeap).
+while adding numbers make sure you maintain the size diff is max 1, and small heap has smaller values than ythat of large heap
+
+7. longest repeating char replacement(sliding windwow)
+for every char, we increase the freq and check if the window is valid and update at every char 
 
 
 /*
@@ -141,11 +238,31 @@ topics
 intreverls (confusing)
 linkedlist*{we need to check for Null at every point before doing any opertion or loops
 for fast slow pointers, use while fast and fast->next}
-heap
+heap{
+    if there is, thaking min, max elements comparing and again adding.
+    highest, least k,
+    intervels,
+}
 bs
 greedy
-backtracking
+backtracking{
+    **Always have push and pop step in backtracking 
+    subsets - include/not include
+    combination sum - similar to subsets(include/not include)
+    permutations - for j in range (j,n) swap dfs swap back 
+    subsets ii(with dublicates) - sort and do the same, include and (skip all the same indices) not include case
+
+
+}
 strings 
-graph
+graph{
+    surround region-reverse thinking{
+        mark boarder regions with temp variable, and then flip the inner regions,
+        then flip back the border regions
+    }
+    rottern oranges{
+        multi-source bfs;
+    }
+}
 ,
 tree,dp,array, 
