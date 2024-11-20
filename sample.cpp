@@ -1,4 +1,5 @@
 // Online C++ compiler to run C++ program online
+// to run g++-14 -std=c++20 test.cpp
 #include <iostream>
 #include <queue>
 #include <map>
@@ -26,7 +27,33 @@ class TreeNode{
         this->right=right;
     }
 };
+// insert Node in bst
+void dfs(TreeNode* root, int val){
+    if(root->val > val){
+        if(!root->left){
+            root->left = new TreeNode(val);
+            return;
+        }
+        dfs(root->left);
+    }
+    if(root->val < val){
+        if(!root->right){
+            root->right = new TreeNode(val);
+            return;
+        }
+        dfs(root->right);
+    }
+}
+TreeNode* insertIntoBST(TreeNode* root, int val) {
+    if(!root) return new TreeNode(val);
+    dfs(root,val);
+    return root;
+}
 
+// lca of binary tree
+TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        
+}
 vector<int> topViewTree(TreeNode* root){
     // top view of binary tree
     // bfs with node and val, +1 for right child, -1 for left child;

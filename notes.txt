@@ -243,7 +243,11 @@ heap{
     highest, least k,
     intervels,
 }
-bs
+bs{
+    two types of questions,
+    1. finding the value in sorted array (1d/2d) 
+    2. bs on answer, and optimise the search space using bs
+}
 greedy
 backtracking{
     **Always have push and pop step in backtracking 
@@ -253,6 +257,10 @@ backtracking{
     subsets ii(with dublicates) - sort and do the same, include and (skip all the same indices) not include case
 
 
+}
+Stack{
+      check intution by oberving the pattern, and if it has LIFO the use stack 
+      monotonically incerasing or decesing, use stack  
 }
 strings 
 graph{
