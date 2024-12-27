@@ -1,0 +1,30 @@
+Leetcode patterns visualisations - https://www.blog.codeinmotion.io/p/leetcode-patterns
+Tech interviews are hard until you learn to recognize the patterns and use them for faster problem solving. 
+
+There’s no shortcut, only practice. 
+
+Here’s a list of resources for you to crush your next tech interview:
+
+►Patterns:
+
+• C++ Patterns: https://lnkd.in/gnZHG3vC
+• Graph Algorithms in 1 Place: https://lnkd.in/gZcHTXsi
+• Backtracking 101: https://lnkd.in/girrWwvH
+
+• Sliding Window Techniques: https://lnkd.in/gBy4yiCu
+• Comprehensive Data Structure and Algorithm study guide: https://lnkd.in/gcUnWavF
+• Ultimate Binary Search guide: https://lnkd.in/gg_BB6ik
+
+• Dynamic Programming patterns for beginners: https://lnkd.in/gevrxmmy
+• 14 patterns to ace any coding interview: https://lnkd.in/gBu9uZtz
+• How to effectively use Leetcode: https://lnkd.in/gEuRT4ik
+
+• All Graph algorithms in one place: https://lnkd.in/g2xdz7TY
+• How to solve Linked List problems: https://lnkd.in/gp7FgTGx
+
+► Practice Resources
+
+• https://neetcode.io/
+• https://www.grind75.com/
+• https://leetcode.com/
+• https://lnkd.in/dEGV-ZfV (applicable for frontend)

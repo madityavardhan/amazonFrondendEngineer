@@ -1,6 +1,7 @@
 *****if you dont understand any solotion, think slow, write on paper, see sol twice or trice, dont get stuck/stop 
 {see course schedule,interviels, heap qns qns brfore interview }
 anamazonsde.com
+https://docs.google.com/document/d/17FvND7nb1R12Kc_kroOw--vrreFJdg4EnjRkk9nqWzI/edit?tab=t.0
 prep day 1 - 11/11(inteerview on 12th){
     go through resume, projects
     Leadership princples
@@ -119,7 +120,15 @@ II - juist interchange the loops
 LCS-two cases if ch[i]==ch[j] cur=1+ch[i+1][j+1] else max(ch[i+1][j],ch[i][j+1])
 reorder string - use heap to store char freq map and pudh alternative chars
 decode ways - we can consider single char, or two chars inclusive of 10,26
-**imp trees 
+**imp trees{
+    concepts-bfs, dfs(use pair of values if you want extra info to be carried on) 
+    use separate functions to write the recurstve steps
+
+Height of Spiral Tree
+Two Mirror Trees
+Root to leaf paths sum
+
+} 
 {max depth of binary treee - two approaches, bfs and find the number of levels
 or dfs and find max length of left and right}
 {MaxPathSum - at each node cal left and right as max(0,left/right), and compute res = max(res,val+left+right) and we return val+max(left,right) since we need to get the path,
@@ -238,13 +247,24 @@ topics
 intreverls (confusing)
 linkedlist*{we need to check for Null at every point before doing any opertion or loops
 for fast slow pointers, use while fast and fast->next}
+{
+    mainly two approaches - fast slow pointers and dummy pointers 
+    see linkedlist recursion, delete last node in ll;gfg
+    iterative and recursive methods 
+    reverse ll recursive - get the last node using recursion and keep it as new head, then reverse the cur node
+    fast slow pointers modification (find detection node,find y point){
+        after you find the inflation point start from the head again
+    }
+}
 heap{
     if there is, thaking min, max elements comparing and again adding.
     highest, least k,
     intervels,
 }
 bs{
-    two types of questions,
+    
+    twobinary search on answers - minimise or maximise something (and simulation)
+    biary search - compare mid valur and fiimd the plogic to go to left or right half of the array types of questions,
     1. finding the value in sorted array (1d/2d) 
     2. bs on answer, and optimise the search space using bs
 }
