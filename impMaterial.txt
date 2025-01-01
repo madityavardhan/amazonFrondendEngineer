@@ -1,3 +1,7 @@
+lld - 
+hld - 
+dsa - striver, you know who 
+
 Leetcode patterns visualisations - https://www.blog.codeinmotion.io/p/leetcode-patterns
 Tech interviews are hard until you learn to recognize the patterns and use them for faster problem solving. 
 
